@@ -1,0 +1,15 @@
+/**
+ * Created by lenovo on 2017/6/13.
+ */
+
+import mu_type from './mutation-types';
+
+export default {
+  increment (state, payload) {
+    // 变更状态
+    state.count +=  payload.amount;
+  },
+  [mu_type.some_mutation] (state, payload) {
+    console.log('glen: ', state.count + payload.amount);
+  }
+};
